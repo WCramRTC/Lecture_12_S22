@@ -1,0 +1,119 @@
+html {
+    background-color: brown;
+    font-size: 22px;
+}
+
+#nav {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#nav a {
+background-color: pink;
+text-align: center;
+padding: 10px 0;
+}
+
+#nav a:hover {
+    background-color: orange;
+}
+
+#container {
+    border: 1px solid black;
+    height: 300px;
+}
+
+.article {
+    height: 100px;
+    background-color: orange;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+.article h3 {
+    text-align: center;
+}
+
+#hero-image {
+    height: 400px;
+    background-color: white;
+}
+
+/* |------------------- 480px */
+@media (max-width: 480px) {
+
+    html {
+        background-color: pink;
+        font-size: 12px;
+    }
+
+    #nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #nav a {
+        border: 1px solid black;
+    }
+
+    #hero-image {
+        height: 200px;
+    }
+
+    /* REM is king for responsive font sizing */
+    .article {
+        font-size: 2rem;
+    }
+
+    .article h3 {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet - 481 |------------------- | 768px */
+@media (min-width: 481px) and ( max-width: 768px) {
+
+    html {
+        background-color: blue;
+    }
+
+    #container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    
+    #hero-image {
+        height: 300px;
+    }
+    .article {
+        height: 175px;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* |------- 480 --------------- 768-----------| */
+@media (min-width: 769px) {
+
+    html {
+        background-color: red;
+    }
+
+    .article {
+        height: 300px;
+    }
+
+    #container {
+        width: 80%;
+        margin: 10px auto;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 5px;
+    }
+}
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
